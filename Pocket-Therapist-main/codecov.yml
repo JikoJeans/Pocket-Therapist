@@ -1,0 +1,16 @@
+comment:                  # this is a top-level key
+  layout: "header, diff, flags, files"
+  behavior: default 
+  require_changes: false  # if true: only post the comment if coverage changes
+  require_base: false        # [true :: must have a base report to post]
+  require_head: true       # [true :: must have a head report to post]
+coverage:
+  status:
+    project:
+      default: false  # disable the default status that measures entire project
+      tests:  # declare a new status context "tests"
+        target: 100%  # we always want 100% coverage here
+        paths: "app/tests/"  # only include coverage in "tests/" folder
+      app:  # declare a new status context "app"
+        paths: "app/lib"  # only include coverage in these folders
+    patch: off

@@ -1,0 +1,54 @@
+name: full-test-suite
+on: [push, pull_request]
+
+env:
+  TEST: 0
+
+jobs:
+  full-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Prepare coverage data for merge
+        run: mv app/coverage/lcov.info app/coverage/lcov.base.info
+
+      - name: Install lcov for coverage merger
+        run: sudo apt-get install lcov
+
+      - name: Install Flutter
+        uses: britannio/action-install-flutter@v1.1
+ 
+      - name: Install Flutter Deps
+        working-directory: ./app
+        run:  flutter pub get > /dev/null
+ 
+      - name: Run Flutter analysis
+        working-directory: ./app
+        run:  flutter analyze
+
+      - name: Find test folders
+        id: check-folder
+        run: |
+          if [ -d "./app/test" ]; then
+            echo "TEST=true" >> "$GITHUB_ENV"
+          fi
+  
+      - name: Run Widget Tests
+        working-directory: ./app
+        run: |
+          if $TEST; then
+            flutter test --merge-coverage --branch-coverage --timeout "5m"
+          else
+            echo "No tests found, not running."
+          fi
+ 
+      - name: Codecov
+        uses: codecov/codecov-action@v3
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        with:
+          files: ./app/coverage/lcov.info
+          name: code-coverage
+ 

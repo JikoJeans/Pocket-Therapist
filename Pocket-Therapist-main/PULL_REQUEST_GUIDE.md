@@ -1,0 +1,16 @@
+- [] Read the PR description
+- [] Read through all the changes, considering the following questions.
+- [] Is there anything you can praise about this PR? Start with praise.
+- [] Are variable names brief but descriptive?
+- [] Are new/changed functions no longer than a paragraph?
+- [] Do all function parameters have default values where appropriate?
+- [] Is there enough documentation?
+- [] If a new feature has been added, or a bug fixed, has a test been added to confirm good behavior?
+- [] Does the test actually test the new/changed functionality?
+- [] Does the test successfully test edge cases?
+- [] Does the test successfully test corner cases?
+- [] Do all files in the PR belong in the repository?
+- [] If the PR deletes files, is this appropriate?
+- [] If the PR adds files or data, are these new files compatible with the repository license?
+- [] Make a review, leaving kind comments and suggesting changes where needed (to resolve the above).
+- [] Thank the author for their contribution.
