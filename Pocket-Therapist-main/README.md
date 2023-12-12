@@ -16,3 +16,5 @@ Our research has shown that mental health apps can in fact be an effective thera
 
 ### Digital Delivery of Mental Health Therapies, Hannah Wilson
 Wilson, H., & EBSCOhost. (2022). Digital delivery of mental health therapies : a guide to the benefits and challenges, and making it work. Jessica Kingsley Publishers.
+### Contributers
+Miguel Munguia, Jacari Harper, Ian Wakayu, Caelan O’Toole, Garrett Prentice, Katrina Parsom
