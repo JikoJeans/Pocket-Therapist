@@ -1,4 +1,4 @@
-[![codecov](https://codecov.io/gh/S1robe/Pocket-Therapist/graph/badge.svg?token=UV1ODNUYHT)](https://codecov.io/gh/S1robe/Pocket-Therapist)
+[![codecov]](https://app.codecov.io/github/JikoJeans/Pocket-Therapist)
 
 # Pocket-Therapist
 Pocket-Therapist attempts to fight a mental health crisis: control over emotions, by taking a self-tracking and self-regulating approach to mental health. Users learn to tune their emotions with an Android application that will provide mood tracking and correlation. Other features include: journaling, time-tracking, organization, and tagging. Tagging is a custom mark that adds a user-defined characteristic to an entry allowing organization, time tracking, and correlation. If time permits, collaboration with therapists and psychologists of the users’ choosing will be included in the future.
